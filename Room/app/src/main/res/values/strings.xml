@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Room</string>
+    <string name="idLivro">Id:</string>
+    <string name="nome_do_livro">Nome do livro:</string>
+    <string name="tipo_do_livro">Tipo do livro:</string>
+    <string name="cadastrar_livro">Cadastrar Livro</string>
+    <string name="diga_o_nome_do_livro">Diga o nome do livro:</string>
+    <string name="diga_o_tipo_do_livro">Diga o tipo do livro:</string>
+    <string name="cancelar">cancelar</string>
+    <string name="confirmar">confirmar</string>
+</resources>

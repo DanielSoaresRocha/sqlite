@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="2"
+        >
+        <TextView android:text="@string/idLivro"
+            style="@style/livro"
+
+            />
+
+        <TextView android:text=""
+            android:id="@+id/idLivro"
+            style="@style/livro"/>
+
+        <TextView android:text="@string/nome_do_livro"
+            style="@style/livro"/>
+
+        <TextView android:text=""
+            android:id="@+id/nomeLivro"
+            style="@style/livro"/>
+
+        <TextView android:text="@string/tipo_do_livro"
+            style="@style/livro"/>
+
+        <TextView android:text=""
+            android:id="@+id/tipoLivro"
+            style="@style/livro"/>
+
+
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="50sp"
+        >
+
+        <ImageView
+            android:id="@+id/esquerdaBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/esquerda" />
+
+        <ImageView
+            android:id="@+id/direitaBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/direita" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/cadastrarBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastrar_livro">
+
+    </Button>
+
+</LinearLayout>
