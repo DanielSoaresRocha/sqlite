@@ -23,4 +23,5 @@ interface LivroDao{
 
     @Query("SELECT * FROM tabela_livro WHERE nomeLivro = :nome")
     fun findByName (nome: String) : Livro
+
 }

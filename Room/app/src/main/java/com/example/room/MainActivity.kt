@@ -30,12 +30,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*
-        db.livroDao().insert(Livro(0,"primeiro livro","teste tipo"))
-        db.livroDao().insert(Livro(0,"segundo livro","teste tipo"))
-        db.livroDao().insert(Livro(0,"terceiro livro","teste tipo"))
-        db.livroDao().insert(Livro(0,"quarto livro","teste tipo"))*/
-
         listener()
 
         db.livroDao().listAll().forEach {
@@ -43,9 +37,18 @@ class MainActivity : AppCompatActivity() {
             Log.i("dados", it.toString())
         }
 
-        mudarLivro()
+        verifica() //esta função verifica se há livros para serem mostrados
+    }
 
-
+    fun verifica(){
+        if(livros.size >0){
+            direitaBtn.visibility = View.VISIBLE
+            esquerdaBtn.visibility = View.VISIBLE
+            mudarLivro()
+        }else{
+            direitaBtn.visibility = View.INVISIBLE
+            esquerdaBtn.visibility = View.INVISIBLE
+        }
     }
 
     fun mudarLivro(){
@@ -94,5 +97,7 @@ class MainActivity : AppCompatActivity() {
             livros.add(it)
             Log.i("dados", it.toString())
         }
+
+        verifica()
     }
 }
