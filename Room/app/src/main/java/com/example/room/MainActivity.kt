@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
     fun verifica(){
         if(livros.size >0){
             direitaBtn.visibility = View.VISIBLE
-            esquerdaBtn.visibility = View.VISIBLE
             mudarLivro()
         }else{
             direitaBtn.visibility = View.INVISIBLE
@@ -79,12 +78,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun testarTamanho(){
-        if(livroDaVez+1 >= livros.size){
+        if(livroDaVez+1 >= livros.size) {
             direitaBtn.visibility = View.INVISIBLE
-        }else if(livroDaVez-1 < 0){
-            esquerdaBtn.visibility = View.INVISIBLE
         }else{
             direitaBtn.visibility = View.VISIBLE
+        }
+
+        if(livroDaVez-1 < 0){
+            esquerdaBtn.visibility = View.INVISIBLE
+        }else{
             esquerdaBtn.visibility = View.VISIBLE
         }
     }
@@ -98,6 +100,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("dados", it.toString())
         }
 
+        livroDaVez = 0
         verifica()
     }
 }
