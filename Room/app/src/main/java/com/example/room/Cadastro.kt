@@ -7,6 +7,7 @@ import androidx.room.Room
 import com.example.room.DataBase.AppDatabase
 import com.example.room.Entity.Livro
 import kotlinx.android.synthetic.main.activity_cadastro.*
+import java.io.IOException
 
 class Cadastro : AppCompatActivity() {
 
@@ -41,12 +42,22 @@ class Cadastro : AppCompatActivity() {
     }
 
     fun adicionarLivro(){
-        db.livroDao().insert(Livro(0,nomeLivroEditText.text.toString()
-            ,tipoLivroEditText.text.toString()))
+        try {
+            db.livroDao().insert(Livro(0,tituloLivroEditText.text.toString()
+                ,autorLivroEditText.text.toString(),Integer.parseInt(anoLivroEditText.text.toString()),
+                ratingBar.rating))
+        }catch ( e: java.lang.NumberFormatException){ // se o usuario digiar um numero invalido o ano vai para 0
+            db.livroDao().insert(Livro(0,tituloLivroEditText.text.toString()
+                ,autorLivroEditText.text.toString(),0,
+                ratingBar.rating))
+        }
+
         Toast.makeText(this,"Livro adicionado",Toast.LENGTH_SHORT).show()
 
-        nomeLivroEditText.setText("")
-        tipoLivroEditText.setText("")
+        tituloLivroEditText.setText("")
+        autorLivroEditText.setText("")
+        anoLivroEditText.setText("")
+        ratingBar.numStars = 0
     }
 
 }

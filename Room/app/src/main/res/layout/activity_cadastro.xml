@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Cadastro"
-    android:orientation="vertical"
-    android:gravity="top|center"
     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="top|center"
+        >
+
 
     <TextView
         android:layout_width="match_parent"
@@ -29,14 +35,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/diga_o_nome_do_livro"
+            android:text="@string/titulo"
             style="@style/livro"
             android:layout_weight="1"
             >
         </TextView>
 
         <EditText
-            android:id="@+id/nomeLivroEditText"
+            android:id="@+id/tituloLivroEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -56,14 +62,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="@string/diga_o_tipo_do_livro"
+            android:text="@string/autor"
             style="@style/livro"
             android:layout_weight="1"
             >
         </TextView>
 
         <EditText
-            android:id="@+id/tipoLivroEditText"
+            android:id="@+id/autorLivroEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -71,6 +77,61 @@
             android:inputType="textPersonName"
             android:text="" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="20sp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/ano"
+            style="@style/livro"
+            android:layout_weight="1"
+            >
+        </TextView>
+
+        <EditText
+            android:id="@+id/anoLivroEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="20sp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/nota"
+            style="@style/livro"
+            android:paddingHorizontal="30sp"
+
+            >
+        </TextView>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize="1"
+            />
+
+    </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,5 +164,6 @@
 
 
     </Button>
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

@@ -21,7 +21,7 @@ interface LivroDao{
     @Query("SELECT * FROM tabela_livro WHERE idLivro = :id")
     fun findById(id: Long): Livro
 
-    @Query("SELECT * FROM tabela_livro WHERE nomeLivro = :nome")
+    @Query("SELECT * FROM tabela_livro WHERE titulo = :nome")
     fun findByName (nome: String) : Livro
 
 }

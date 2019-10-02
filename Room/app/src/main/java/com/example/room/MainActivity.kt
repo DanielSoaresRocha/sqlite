@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.room.*
 import com.example.room.DataBase.AppDatabase
 import com.example.room.Entity.Livro
+import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.sql.SQLOutput
 
@@ -57,12 +58,16 @@ class MainActivity : AppCompatActivity() {
         idLivro.text = ""
         nomeLivro.text = ""
         tipoLivro.text = ""
+        anoLivro.text = ""
+        notaLivro.text = ""
     }
 
     fun mudarLivro(){
         idLivro.text = livros.get(livroDaVez).idLivro.toString()
-        nomeLivro.text = livros.get(livroDaVez).nomeLivro.toString()
-        tipoLivro.text = livros.get(livroDaVez).tipoLivro.toString()
+        nomeLivro.text = livros.get(livroDaVez).titulo.toString() //titulo
+        tipoLivro.text = livros.get(livroDaVez).autor.toString()  //autor
+        anoLivro.text = livros.get(livroDaVez).ano.toString()
+        notaLivro.text = livros.get(livroDaVez).nota.toString()
 
         testarTamanho()
     }

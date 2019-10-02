@@ -24,19 +24,34 @@
             android:id="@+id/idLivro"
             style="@style/livro"/>
 
-        <TextView android:text="@string/nome_do_livro"
+        <TextView android:text="@string/tituloo"
             style="@style/livro"/>
 
         <TextView android:text=""
             android:id="@+id/nomeLivro"
             style="@style/livro"/>
 
-        <TextView android:text="@string/tipo_do_livro"
+        <TextView android:text="@string/autor"
             style="@style/livro"/>
 
         <TextView android:text=""
             android:id="@+id/tipoLivro"
             style="@style/livro"/>
+
+        <TextView android:text="@string/ano"
+            style="@style/livro"/>
+
+        <TextView android:text=""
+            android:id="@+id/anoLivro"
+            style="@style/livro"/>
+
+        <TextView android:text="@string/nota"
+            style="@style/livro"/>
+
+        <TextView android:text=""
+            android:id="@+id/notaLivro"
+            style="@style/livro"/>
+
 
 
     </GridLayout>
