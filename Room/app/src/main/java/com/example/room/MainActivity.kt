@@ -43,11 +43,20 @@ class MainActivity : AppCompatActivity() {
     fun verifica(){
         if(livros.size >0){
             direitaBtn.visibility = View.VISIBLE
+            excluirBtn.visibility = View.VISIBLE
             mudarLivro()
         }else{
             direitaBtn.visibility = View.INVISIBLE
             esquerdaBtn.visibility = View.INVISIBLE
+            excluirBtn.visibility = View.INVISIBLE
+            limparCampos()
         }
+    }
+
+    fun limparCampos(){
+        idLivro.text = ""
+        nomeLivro.text = ""
+        tipoLivro.text = ""
     }
 
     fun mudarLivro(){
@@ -74,6 +83,11 @@ class MainActivity : AppCompatActivity() {
         cadastrarBtn.setOnClickListener {
             var telaCadastro = Intent(this,Cadastro::class.java)
             startActivity(telaCadastro)
+        }
+
+        excluirBtn.setOnClickListener {
+            db.livroDao().delete(livros.get(livroDaVez))
+            onResume()
         }
     }
 

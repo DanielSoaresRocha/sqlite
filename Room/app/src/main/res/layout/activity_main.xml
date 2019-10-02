@@ -56,11 +56,21 @@
             app:srcCompat="@drawable/esquerda" />
 
         <ImageView
+            android:id="@+id/excluirBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/excluir" />
+
+        <ImageView
             android:id="@+id/direitaBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/direita" />
+
+
+
     </LinearLayout>
 
     <Button
