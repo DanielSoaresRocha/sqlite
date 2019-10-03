@@ -23,8 +23,9 @@ class MainActivity : AppCompatActivity() {
             .allowMainThreadQueries()
             .build()
     }
-
-    var livros = ArrayList<Livro>()
+    companion object {  //variaveis estáticas
+        var livros = ArrayList<Livro>()
+    }
     var livroDaVez = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -93,6 +94,11 @@ class MainActivity : AppCompatActivity() {
         excluirBtn.setOnClickListener {
             db.livroDao().delete(livros.get(livroDaVez))
             onResume()
+        }
+
+        pesquisarBtn.setOnClickListener {
+            var telaPesquisa = Intent(this,PesquisaLivro::class.java)
+            startActivity(telaPesquisa)
         }
     }
 
