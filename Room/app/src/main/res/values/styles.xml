@@ -10,7 +10,7 @@
 
     <style name="livro">
         <item name="android:textColor">@color/corLivro</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:gravity">center</item>
 
 

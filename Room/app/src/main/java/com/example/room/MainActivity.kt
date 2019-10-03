@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.room.*
 import com.example.room.DataBase.AppDatabase
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         verifica() //esta função verifica se há livros para serem mostrados
+        autoComplete()
     }
 
     fun verifica(){
@@ -96,10 +98,19 @@ class MainActivity : AppCompatActivity() {
             onResume()
         }
 
-        pesquisarBtn.setOnClickListener {
-            var telaPesquisa = Intent(this,PesquisaLivro::class.java)
-            startActivity(telaPesquisa)
+        autoCompleteTextView.setOnItemClickListener { adapterView, view, i, l ->
+            var selected = adapterView.getItemAtPosition(i).toString()
+
+            var livro = db.livroDao().findByName(selected)
+
+            idLivro.setText(livro.idLivro.toString())
+            nomeLivro.setText(livro.titulo.toString())
+            tipoLivro.setText(livro.autor.toString())
+            anoLivro.setText(livro.ano.toString())
+            notaLivro.setText(livro.nota.toString())
+
         }
+
     }
 
     fun testarTamanho(){
@@ -116,6 +127,21 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    fun autoComplete(){
+        var nomeLivros = arrayOfNulls<String>(livros.size)
+
+        for(i in 0 until livros.size){
+            nomeLivros[i] = livros.get(i).titulo
+            Log.i("array de livros= ", ""+nomeLivros[i])
+        }
+
+        var livrosToListAdapter = ArrayAdapter<String>(this,
+            R.layout.activity_main2, nomeLivros)
+
+        autoCompleteTextView.setAdapter(livrosToListAdapter)
+
+    }
+
     override fun onResume() {
         super.onResume()
         livros.clear()//limpar lista
@@ -127,5 +153,6 @@ class MainActivity : AppCompatActivity() {
 
         livroDaVez = 0
         verifica()
+        autoComplete()
     }
 }

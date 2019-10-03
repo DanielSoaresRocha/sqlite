@@ -4,5 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="corLivro">#0C40B1</color>
+    <color name="corLista">#83848D</color>
 
 </resources>
