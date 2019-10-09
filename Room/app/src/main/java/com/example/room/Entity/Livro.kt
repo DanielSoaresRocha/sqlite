@@ -18,7 +18,10 @@ data class Livro(
     val ano: Int?,
 
     @ColumnInfo(name = "nota")
-    val nota: Float
+    val nota: Float,
+
+    @ColumnInfo(name = "imagem")
+    val imagem: Int
 
 
 

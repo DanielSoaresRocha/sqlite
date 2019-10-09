@@ -76,6 +76,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun listener(){
+        listarLivros.setOnClickListener{
+            var listarLivros = Intent(this,ListaLivros::class.java)
+            startActivity(listarLivros)
+        }
+
         direitaBtn.setOnClickListener {
             livroDaVez++
             mudarLivro()

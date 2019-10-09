@@ -45,11 +45,11 @@ class Cadastro : AppCompatActivity() {
         try {
             db.livroDao().insert(Livro(0,tituloLivroEditText.text.toString()
                 ,autorLivroEditText.text.toString(),Integer.parseInt(anoLivroEditText.text.toString()),
-                ratingBar.rating))
+                ratingBar.rating,R.drawable.livro))
         }catch ( e: java.lang.NumberFormatException){ // se o usuario digiar um numero invalido o ano vai para 0
             db.livroDao().insert(Livro(0,tituloLivroEditText.text.toString()
                 ,autorLivroEditText.text.toString(),0,
-                ratingBar.rating))
+                ratingBar.rating,R.drawable.livro))
         }
 
         Toast.makeText(this,"Livro adicionado",Toast.LENGTH_SHORT).show()
