@@ -76,6 +76,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun listener(){
+
+        listarLivrosRecycle.setOnClickListener {
+            var listarLivrosRecycle = Intent(this,ListaLivroRecycle::class.java)
+            startActivity(listarLivrosRecycle)
+        }
+
         listarLivros.setOnClickListener{
             var listarLivros = Intent(this,ListaLivros::class.java)
             startActivity(listarLivros)

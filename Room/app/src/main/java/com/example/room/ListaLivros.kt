@@ -13,9 +13,6 @@ class ListaLivros : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_filmes)
 
-
-        listView.adapter = LivrosAdapter(this,MainActivity.livros)
-
         listView.adapter = LivrosAdapter(this, MainActivity.livros as List<Livro>)
 
         listView.setOnItemClickListener{adapterView, view, i, l ->

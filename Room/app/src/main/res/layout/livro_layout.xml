@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imagemView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"/>
+        android:layout_weight="3"
+        android:src="@drawable/livro"
+        />
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="7"/>
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:textSize="30sp"
+        android:text="exemplo"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewAutor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:textSize="20sp"
+        android:text="exemplo"
+
+        />
+    </LinearLayout>
 
 </LinearLayout>
