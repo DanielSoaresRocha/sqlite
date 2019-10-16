@@ -2,6 +2,7 @@ package com.example.room
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.room.Adapter.LivrosAdapterRecycle
 import com.example.room.Entity.Livro
@@ -17,7 +18,9 @@ class ListaLivroRecycle : AppCompatActivity() {
         recyclerview.adapter = adapter
 
 
-        val layout = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        //val layout = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
+        val layout = GridLayoutManager(this,4)
 
         recyclerview.layoutManager = layout
     }
