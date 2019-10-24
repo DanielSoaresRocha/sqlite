@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.room.*
 import com.example.room.DataBase.AppDatabase
 import com.example.room.Entity.Livro
+import com.example.room.PageAdapter.PageAdapterController
 import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.sql.SQLOutput
@@ -76,6 +77,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun listener(){
+
+        listaPageAdapter.setOnClickListener {
+            var listarPageRecycle = Intent(this,PageAdapterController::class.java)
+            startActivity(listarPageRecycle)
+        }
 
         listarLivrosRecycle.setOnClickListener {
             var listarLivrosRecycle = Intent(this,ListaLivroRecycle::class.java)

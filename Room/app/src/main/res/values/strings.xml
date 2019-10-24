@@ -14,4 +14,5 @@
     <string name="listar_livros">listar livros</string>
     <string name="quantidade">Quantidade:</string>
     <string name="livros_recycle">livros recycle</string>
+    <string name="page_adapter">Page Adapter</string>
 </resources>
