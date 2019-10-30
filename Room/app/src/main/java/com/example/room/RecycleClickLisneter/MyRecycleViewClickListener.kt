@@ -21,21 +21,19 @@ class MyRecycleViewClickListener(val context: Context, val view:RecyclerView,val
 
     init {
         myGestureDetector = GestureDetector(context,object :GestureDetector.SimpleOnGestureListener(){
-            override fun onSingleTapUp(motionEvent: MotionEvent?): Boolean {
-                return super.onSingleTapUp(motionEvent)
-                val childView = view.findChildViewUnder(motionEvent!!.x, motionEvent.y)
-                if(childView != null){
-                    listener.onItemClick(childView,view.getChildAdapterPosition(childView))
-                    Log.i("Teste","onSingleTapUp")
-                }else{
-                    Log.i("Teste","é nulo")
+            override fun onSingleTapUp(motionEvent: MotionEvent): Boolean {
+                super.onSingleTapUp(motionEvent)
+                val childView = view.findChildViewUnder(motionEvent.x, motionEvent.y)
+                if (childView != null) {
+                    listener.onItemClick(childView, view.getChildAdapterPosition(childView))
+                    Log.i("Teste", "onSingleTapUp ")
                 }
                 return true
             }
 
-            override fun onLongPress(motionEvent: MotionEvent?) {
+            override fun onLongPress(motionEvent: MotionEvent) {
                 super.onLongPress(motionEvent)
-                val childView = view.findChildViewUnder(motionEvent!!.x,motionEvent.y)
+                val childView = view.findChildViewUnder(motionEvent.x,motionEvent.y)
                 if (childView != null){
                     listener.onItemLongClick(
                         childView,
