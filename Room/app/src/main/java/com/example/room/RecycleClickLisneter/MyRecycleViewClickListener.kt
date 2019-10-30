@@ -27,6 +27,8 @@ class MyRecycleViewClickListener(val context: Context, val view:RecyclerView,val
                 if(childView != null){
                     listener.onItemClick(childView,view.getChildAdapterPosition(childView))
                     Log.i("Teste","onSingleTapUp")
+                }else{
+                    Log.i("Teste","é nulo")
                 }
                 return true
             }
@@ -40,6 +42,8 @@ class MyRecycleViewClickListener(val context: Context, val view:RecyclerView,val
                         view.getChildAdapterPosition(childView)
                     )
                     Log.i("Teste", "onLongPress")
+                }else{
+                    Log.i("Teste","é nulo")
                 }
             }
         })

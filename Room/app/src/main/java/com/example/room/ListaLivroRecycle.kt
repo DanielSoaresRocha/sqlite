@@ -27,6 +27,8 @@ class ListaLivroRecycle : AppCompatActivity() {
         //val layout = GridLayoutManager(this,4)
         //val layout = StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL)
 
+        recyclerview.layoutManager = layout
+
         recyclerview.addOnItemTouchListener(
             MyRecycleViewClickListener(
                 this@ListaLivroRecycle,
@@ -58,6 +60,6 @@ class ListaLivroRecycle : AppCompatActivity() {
             )
         )
 
-        recyclerview.layoutManager = layout
+
     }
 }
