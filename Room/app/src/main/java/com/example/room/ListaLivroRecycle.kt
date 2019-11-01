@@ -31,7 +31,7 @@ class ListaLivroRecycle : AppCompatActivity() {
 
         recyclerview.layoutManager = layout
 
-        recyclerview.addOnItemTouchListener(
+        /*recyclerview.addOnItemTouchListener(
             MyRecycleViewClickListener(
                 this@ListaLivroRecycle,
                 recyclerview,
@@ -42,6 +42,7 @@ class ListaLivroRecycle : AppCompatActivity() {
                     }
 
                     override fun onItemLongClick(view: View, position: Int) {
+
                         val removida = MainActivity.livros[position]
                         MainActivity.livros.remove(removida)
                         recyclerview.adapter!!.notifyItemRemoved(position)
@@ -60,7 +61,7 @@ class ListaLivroRecycle : AppCompatActivity() {
                     }
                 }
             )
-        )
+        )*/
 
         recyclerview.itemAnimator = DefaultItemAnimator()
         /*

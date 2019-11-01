@@ -39,7 +39,7 @@ class LivrosAdapterRecycle(var c: Context, var livros:ArrayList<Livro>) : Recycl
 
     override fun onBindViewHolder(holder: LivroViewHolderRecycle, position: Int) {
 
-        holder.addAnimation()
+        //holder.addAnimation()
         val livroEscolhido = livros[position]
         holder.textViewTitulo.text = livroEscolhido.titulo
         holder.textViewAutor.text = livroEscolhido.autor
@@ -107,16 +107,23 @@ class LivrosAdapterRecycle(var c: Context, var livros:ArrayList<Livro>) : Recycl
 
         if (fromPosition < toPosition) {
             for (i in fromPosition until toPosition) {
-                Collections.swap(livros, i, i + 1)
+                swap(i, i + 1)
+
             }
         } else {
             for (i in fromPosition downTo toPosition + 1) {
-                Collections.swap(livros, i, i - 1)
+                swap(i, i - 1)
             }
         }
 
         notifyItemMoved(fromPosition, toPosition)
         notifyItemChanged(toPosition)
         notifyItemChanged(fromPosition)
+    }
+
+    fun swap(pos1 : Int, pos2 : Int){
+        var temp = livros[pos1]
+        livros[pos1] = livros[pos2]
+        livros[pos2] = temp
     }
 }
