@@ -11,6 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.room.R
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
+import android.widget.Button
+import android.widget.LinearLayout
 
 
 class LivroViewHolderRecycle(var v: View) : RecyclerView.ViewHolder(v){
@@ -18,12 +20,18 @@ class LivroViewHolderRecycle(var v: View) : RecyclerView.ViewHolder(v){
     val textViewTitulo: TextView
     val textViewAutor: TextView
     val img: ImageView
+    val layoutNormal:LinearLayout
+    val layoutGone : LinearLayout
+    val undoButton : Button
 
     init {
         Log.i("HOLDER", "Fazendo buscas por id...")
         textViewTitulo = v.findViewById(R.id.textViewTitulo)
         textViewAutor = v.findViewById(R.id.textViewAutor)
         img = v.findViewById(R.id.imagemView)
+        layoutNormal = v.findViewById(R.id.layout_normal)
+        layoutGone = v.findViewById(R.id.layout_gone)
+        undoButton = v.findViewById(R.id.undo_button)
     }
 
     fun addAnimation(){
