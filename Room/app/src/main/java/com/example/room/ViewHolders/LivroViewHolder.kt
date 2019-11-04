@@ -1,4 +1,4 @@
-package com.example.room.Adapter
+package com.example.room.ViewHolders
 
 import android.util.Log
 import android.view.View

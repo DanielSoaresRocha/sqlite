@@ -1,4 +1,4 @@
-package com.example.room
+package com.example.room.listViews
 
 import android.graphics.Canvas
 import android.graphics.drawable.ColorDrawable
@@ -11,7 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.room.Adapter.LivrosAdapterRecycle
 import com.example.room.Entity.Livro
-import kotlinx.android.synthetic.main.activity_lista_livro_recycle.*
+import com.example.room.OpcoesListas
+import com.example.room.R
 import kotlinx.android.synthetic.main.activity_lista_livro_recycle2.*
 
 class ListaLivroRecycle2 : AppCompatActivity() {

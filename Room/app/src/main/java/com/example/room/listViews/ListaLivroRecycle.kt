@@ -1,16 +1,14 @@
-package com.example.room
+package com.example.room.listViews
 
-import android.graphics.Canvas
-import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.*
-import androidx.recyclerview.widget.ItemTouchHelper.*
 import com.example.room.Adapter.LivrosAdapterRecycle
 import com.example.room.Entity.Livro
+import com.example.room.OpcoesListas
+import com.example.room.R
 import com.example.room.RecycleClickLisneter.MyRecycleViewClickListener
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_lista_livro_recycle.*

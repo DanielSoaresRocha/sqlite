@@ -6,37 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import android.widget.ImageView
-import android.widget.TextView
 import com.example.room.Entity.Livro
-import com.example.room.R
 import android.view.animation.AnimationSet
 import android.view.animation.AlphaAnimation
-import android.view.animation.Animation
 import android.view.animation.TranslateAnimation
-
-
+import com.example.room.ViewHolders.LivroViewHolder
 
 
 class LivrosAdapter(var context: Context, var f: List<Livro>) : BaseAdapter() {
 
-    /*
-    override fun getView(position: Int, p1: View?, parent: ViewGroup?): View {
-        var v = LayoutInflater.from(context).inflate(R.layout.livro_layout, parent, false)
-        var nomeFruta = v.findViewById<TextView>(R.id.textView)
-        var imageFruta = v.findViewById<ImageView>(R.id.imagemView)
-
-        var frutaAtual = f.get(position)
-
-        nomeFruta.text = frutaAtual.titulo
-        imageFruta.setImageResource(R.drawable.livro)
-
-        return v
-    }*/
-
    override fun getView(position: Int, convertView: View?, viewGroup: ViewGroup?): View {
        Log.i("HOLDER", "GetView invocado...")
-       var holder:LivroViewHolder
+       var holder: LivroViewHolder
        var view:View
 
        if (convertView == null){

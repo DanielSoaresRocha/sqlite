@@ -6,12 +6,10 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AlphaAnimation
-import android.view.animation.AnimationSet
-import android.view.animation.TranslateAnimation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.room.Entity.Livro
 import com.example.room.R
+import com.example.room.ViewHolders.LivroViewHolderRecycle
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
@@ -39,7 +37,7 @@ class LivrosAdapterRecycle(var c: Context, var livros:ArrayList<Livro>) : Recycl
 
     override fun onBindViewHolder(holder: LivroViewHolderRecycle, position: Int) {
 
-        //holder.addAnimation()
+        holder.addAnimation()
         val livroEscolhido = livros[position]
         holder.textViewTitulo.text = livroEscolhido.titulo
         holder.textViewAutor.text = livroEscolhido.autor

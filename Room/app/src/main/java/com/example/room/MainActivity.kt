@@ -1,19 +1,14 @@
 package com.example.room
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.room.*
 import com.example.room.DataBase.AppDatabase
 import com.example.room.Entity.Livro
-import com.example.room.PageAdapter.PageAdapterController
-import kotlinx.android.synthetic.main.activity_cadastro.*
 import kotlinx.android.synthetic.main.activity_main.*
-import java.sql.SQLOutput
 
 class MainActivity : AppCompatActivity() {
 

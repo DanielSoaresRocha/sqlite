@@ -4,11 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.GridView
 import androidx.room.Room
 import com.example.room.DataBase.AppDatabase
 import com.example.room.Entity.Livro
-import com.example.room.PageAdapter.PageAdapterController
+import com.example.room.listViews.PageAdapterController
+import com.example.room.listViews.ListaLivroRecycle
+import com.example.room.listViews.ListaLivroRecycle2
+import com.example.room.listViews.ListaLivros
+import com.example.room.listViews.listGridView
 import kotlinx.android.synthetic.main.activity_opcoes_listas.*
 
 class OpcoesListas : AppCompatActivity() {
@@ -49,22 +52,22 @@ class OpcoesListas : AppCompatActivity() {
         }
 
         listViewBtn.setOnClickListener {
-            var listView = Intent(this,ListaLivros::class.java)
+            var listView = Intent(this, ListaLivros::class.java)
             startActivity(listView)
         }
 
         gridViewBtn.setOnClickListener {
-            var gridView = Intent(this,listGridView::class.java)
+            var gridView = Intent(this, listGridView::class.java)
             startActivity(gridView)
         }
 
         listaRecycleBtn.setOnClickListener {
-            var listaRecycle = Intent(this,ListaLivroRecycle::class.java)
+            var listaRecycle = Intent(this, ListaLivroRecycle::class.java)
             startActivity(listaRecycle)
         }
 
         listaRecycleBtn2.setOnClickListener {
-            var listaRecycle2 = Intent(this,ListaLivroRecycle2::class.java)
+            var listaRecycle2 = Intent(this, ListaLivroRecycle2::class.java)
             startActivity(listaRecycle2)
         }
 
