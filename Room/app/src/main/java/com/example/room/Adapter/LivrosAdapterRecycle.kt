@@ -74,6 +74,8 @@ class LivrosAdapterRecycle(var c: Context, var livros:ArrayList<Livro>) : Recycl
         }else{
             //mostra padrão
             holder.textViewTitulo.setText(livroEscolhido.titulo)
+            holder.textViewAutor.setText(livroEscolhido.autor)
+            holder.img.setImageResource(R.drawable.livro)
             holder.layoutNormal.setVisibility(View.VISIBLE)
             holder.layoutGone.setVisibility(View.GONE)
             holder.undoButton.setVisibility(View.GONE)
@@ -104,15 +106,17 @@ class LivrosAdapterRecycle(var c: Context, var livros:ArrayList<Livro>) : Recycl
     }
 
     fun mover(fromPosition: Int, toPosition: Int) {
-
+        //Log.i("moveu", "fromPosisio = "+fromPosition+ "toPosition= "+ toPosition)
         if (fromPosition < toPosition) {
             for (i in fromPosition until toPosition) {
-                swap(i, i + 1)
+                Collections.swap(livros,i, i + 1)
+                //Log.i("moveu", "Moveu de "+i+ "para "+(i+1))
 
             }
         } else {
             for (i in fromPosition downTo toPosition + 1) {
-                swap(i, i - 1)
+                Collections.swap(livros,i, i - 1)
+               // Log.i("moveu", "Moveu de "+i+ "para "+(i+1))
             }
         }
 
@@ -121,9 +125,9 @@ class LivrosAdapterRecycle(var c: Context, var livros:ArrayList<Livro>) : Recycl
         notifyItemChanged(fromPosition)
     }
 
-    fun swap(pos1 : Int, pos2 : Int){
+    /*fun swap(pos1 : Int, pos2 : Int){
         var temp = livros[pos1]
         livros[pos1] = livros[pos2]
         livros[pos2] = temp
-    }
+    }*/
 }

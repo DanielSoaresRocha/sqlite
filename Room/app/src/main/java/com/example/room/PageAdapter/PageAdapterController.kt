@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.viewpager.widget.ViewPager
 import com.example.room.Adapter.PageAdapter
 import com.example.room.MainActivity
+import com.example.room.OpcoesListas
 import com.example.room.R
 import kotlinx.android.synthetic.main.activity_page_adapter_controller.*
 
@@ -15,7 +16,7 @@ class PageAdapterController : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_page_adapter_controller)
 
-        viewpager.adapter = PageAdapter(this, MainActivity.livros)
+        viewpager.adapter = PageAdapter(this, OpcoesListas.livros)
         viewpager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
 
             override fun onPageScrollStateChanged(state: Int) {

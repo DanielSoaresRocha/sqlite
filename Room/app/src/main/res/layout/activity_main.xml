@@ -104,39 +104,5 @@
 
 
     </LinearLayout>
-
-    <Button
-        android:id="@+id/cadastrarBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cadastrar_livro">
-
-    </Button>
-
-    <Button
-        android:id="@+id/listarLivros"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/listar_livros">
-
-    </Button>
-
-    <Button
-        android:id="@+id/listarLivrosRecycle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/livros_recycle">
-
-    </Button>
-
-    <Button
-        android:id="@+id/listaPageAdapter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/page_adapter"
-        >
-
-
-    </Button>
     </LinearLayout>
 </ScrollView>

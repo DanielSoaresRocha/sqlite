@@ -78,21 +78,6 @@ class MainActivity : AppCompatActivity() {
 
     fun listener(){
 
-        listaPageAdapter.setOnClickListener {
-            var listarPageRecycle = Intent(this,PageAdapterController::class.java)
-            startActivity(listarPageRecycle)
-        }
-
-        listarLivrosRecycle.setOnClickListener {
-            var listarLivrosRecycle = Intent(this,ListaLivroRecycle::class.java)
-            startActivity(listarLivrosRecycle)
-        }
-
-        listarLivros.setOnClickListener{
-            var listarLivros = Intent(this,ListaLivros::class.java)
-            startActivity(listarLivros)
-        }
-
         direitaBtn.setOnClickListener {
             livroDaVez++
             mudarLivro()
@@ -103,11 +88,6 @@ class MainActivity : AppCompatActivity() {
             livroDaVez--
             mudarLivro()
             Log.i("LIVRO", "Livro da vez = " + livroDaVez)
-        }
-
-        cadastrarBtn.setOnClickListener {
-            var telaCadastro = Intent(this,Cadastro::class.java)
-            startActivity(telaCadastro)
         }
 
         excluirBtn.setOnClickListener {

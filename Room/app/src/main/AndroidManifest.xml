@@ -9,19 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PageAdapter.PageAdapterController"></activity>
-        <activity android:name=".ListaLivroRecycle" />
-        <activity android:name=".ListaLivros" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".PesquisaLivro" />
-        <activity android:name=".Cadastro" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".ListaLivroRecycle2"></activity>
+        <activity android:name=".listGridView" />
+        <activity android:name=".OpcoesListas">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PageAdapter.PageAdapterController" />
+        <activity android:name=".ListaLivroRecycle" />
+        <activity android:name=".ListaLivros" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".PesquisaLivro" />
+        <activity android:name=".Cadastro" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

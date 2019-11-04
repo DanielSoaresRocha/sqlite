@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpcoesListas"
+    android:orientation="vertical"
+    android:gravity="top"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Livraria"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:fontFamily="casual"
+        android:paddingVertical="20sp"
+        />
+
+    <Button
+        android:id="@+id/cadastroBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cadastro de livros"
+        />
+
+    <Button
+        android:id="@+id/avancar_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Avançar/voltar"
+        />
+
+    <Button
+        android:id="@+id/listViewBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ListView"
+        />
+
+    <Button
+        android:id="@+id/gridViewBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GridView"
+        />
+
+    <Button
+        android:id="@+id/listaRecycleBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recycle Simples/Logo"
+        />
+
+    <Button
+        android:id="@+id/listaRecycleBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Swipe/drag"
+        />
+
+    <Button
+        android:id="@+id/pageViewBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PageView"
+        />
+
+
+</LinearLayout>
